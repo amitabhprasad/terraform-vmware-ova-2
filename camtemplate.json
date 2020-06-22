@@ -1,5 +1,5 @@
 {
-  "name": "Ben-SingleVirtualMachine",
+  "name": "Ben - OVA-Template",
   "description": "Create Virtual Machine with single vnic",
   "type": "prebuilt",
   "version": "1.0",
@@ -20,7 +20,7 @@
     }
   },
   "metadata": {
-      "displayName": "Ben-SingleVirtualMachine",
+      "displayName": "Ben - OVA-Template",
       "longDescription": "Create Virtual Machine with single vnic on a network label by cloning",
       "bullets": [
        {
