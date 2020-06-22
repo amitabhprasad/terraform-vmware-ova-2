@@ -1,7 +1,7 @@
 #cloud-config
 
 # sets the hostname to 'terraformed'
-hostname: terraformed
+hostname: http2
 
 users:
 # Adds a user called 'itmuser' with the password hash of 'Ams49test', sudo rights and the default ubuntu groups
