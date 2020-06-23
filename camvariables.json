@@ -111,7 +111,7 @@
       "type": "string",
       "description": "VMware template that should be used when creating the virtual image",
       "hidden": false,
-      "default": "demo",
+      "default": "ubuntu-OVA",
       "label": "Operating System ID / Template - vm_1",
       "secured": false,
       "required": true,
