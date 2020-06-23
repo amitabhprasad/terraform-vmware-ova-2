@@ -213,4 +213,11 @@ resource "vsphere_virtual_machine" "vm_1" {
    cdrom {
     client_device = true
   }
+  
+    vapp {
+    properties {
+      user-data = "${base64encode(file("cloud-init.yml"))}"
+    }
+  }
+
 }
