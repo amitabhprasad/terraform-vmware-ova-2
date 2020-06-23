@@ -1,0 +1,12 @@
+#cloud-config
+
+# sets the hostname to 'terraformed'
+hostname: terraformed
+
+users:
+# Adds a user called 'itmuser' with the password hash of 'Ams49test', sudo rights and the default ubuntu groups
+        - name: itmuser
+          passwd: $1$SaltSalt$ltpCl0yrDee/iQQwEU8wY0
+          lock_passwd: false 
+          sudo: ALL=(ALL) ALL
+          groups: [adm, audio, cdrom, dialout, floppy, video, plugdev, dip, netdev]
