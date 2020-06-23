@@ -12,7 +12,7 @@ variable "allow_unverified_ssl" {
 # Define the vsphere provider 
 ##############################################################
 provider "vsphere" {
-  allow_unverified_ssl = var.allow_unverified_ssl
+#  allow_unverified_ssl = var.allow_unverified_ssl
   version              = "~> 1.3"
 }
 
