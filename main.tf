@@ -48,3 +48,24 @@ resource "vsphere_virtual_machine" "vm" {
 
   disk {
     label            = "disk0"
+    size             = "${data.vsphere_virtual_machine.template.disks.0.size}"
+    eagerly_scrub    = "${data.vsphere_virtual_machine.template.disks.0.eagerly_scrub}"
+    thin_provisioned = "${data.vsphere_virtual_machine.template.disks.0.thin_provisioned}"
+  }
+
+  cdrom {
+    client_device = true
+  }
+
+  clone {
+    template_uuid = "${data.vsphere_virtual_machine.template.id}"
+  }
+
+  vapp {
+    properties = {
+        user-data = "${base64encode(file("cloud-init.yml"))}"
+#       "guestinfo.tf.internal.id" = "42"
+    }
+  }
+
+}
