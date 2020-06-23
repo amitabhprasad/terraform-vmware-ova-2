@@ -1,9 +1,23 @@
-provider "vsphere" {
-  user           = "Administrator@tivlab.raleigh.ibm.com"
-  password       = "Ams49test!"
-  vsphere_server = "vcenter1.tivlab.raleigh.ibm.com"
+# This is a terraform generated template generated from blueprint89
 
-  allow_unverified_ssl = true
+##############################################################
+# Keys - CAMC (public/private) & optional User Key (public) 
+##############################################################
+variable "allow_unverified_ssl" {
+  description = "Communication with vsphere server with self signed certificate"
+  default     = "true"
+}
+
+##############################################################
+# Define the vsphere provider 
+##############################################################
+provider "vsphere" {
+  allow_unverified_ssl = var.allow_unverified_ssl
+  version              = "~> 1.19"
+}
+
+provider "camc" {
+  version = "~> 0.2"
 }
 
 data "vsphere_datacenter" "dc" {
