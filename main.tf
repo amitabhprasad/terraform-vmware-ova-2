@@ -209,8 +209,8 @@ resource "vsphere_virtual_machine" "vm_1" {
     size           = var.vm_1_root_disk_size
     # keep_on_remove = var.vm_1_root_disk_keep_on_remove
     # datastore_id   = data.vsphere_datastore.vm_1_datastore.id
-    eagerly_scrub    = data.vsphere_virtual_machine.template.disks.0.eagerly_scrub
-    thin_provisioned = data.vsphere_virtual_machine.template.disks.0.thin_provisioned
+    #eagerly_scrub    = data.vsphere_virtual_machine.template.disks.0.eagerly_scrub
+    # thin_provisioned = data.vsphere_virtual_machine.template.disks.0.thin_provisioned
   }
   
    cdrom {
