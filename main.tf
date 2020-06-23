@@ -170,7 +170,7 @@ variable "vm_1-image" {
 # vsphere vm
 resource "vsphere_virtual_machine" "vm_1" {
   name             = var.vm_1_name
-  folder           = var.vm_1_folder
+  # folder           = var.vm_1_folder
   num_cpus         = var.vm_1_number_of_vcpu
   memory           = var.vm_1_memory
   resource_pool_id = data.vsphere_resource_pool.vm_1_resource_pool.id
@@ -204,10 +204,13 @@ resource "vsphere_virtual_machine" "vm_1" {
   }
 
   disk {
-    label          = "${var.vm_1_name}0.vmdk"
+    # label          = "${var.vm_1_name}0.vmdk"
+    label          = "disk0"
     size           = var.vm_1_root_disk_size
-    keep_on_remove = var.vm_1_root_disk_keep_on_remove
-    datastore_id   = data.vsphere_datastore.vm_1_datastore.id
+    # keep_on_remove = var.vm_1_root_disk_keep_on_remove
+    # datastore_id   = data.vsphere_datastore.vm_1_datastore.id
+    eagerly_scrub    = data.vsphere_virtual_machine.template.disks.0.eagerly_scrub
+    thin_provisioned = data.vsphere_virtual_machine.template.disks.0.thin_provisioned
   }
   
    cdrom {
@@ -216,7 +219,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   
     vapp {
     properties {
-      user-data = "${base64encode(file("cloud-init.yml"))}"
+      user-data = base64encode(file("cloud-init.yml"))
     }
   }
 
