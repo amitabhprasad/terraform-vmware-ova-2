@@ -118,18 +118,6 @@
       "immutable": false,
       "group_name": "virtualmachine"
     },
-#    {
-#      "name": "vm_1-image",
-#      "type": "string",
-#      "description": "VMware template that should be used when creating the virtual image",
-#      "hidden": false,
-#      "default": "demo",
-#      "label": "Operating System ID / Template - vm_1",
-#      "secured": false,
-#      "required": true,
-#      "immutable": false,
-#      "group_name": "virtualmachine"
-#    },
     {
       "name": "vm_1_root_disk_size",
       "type": "string",
