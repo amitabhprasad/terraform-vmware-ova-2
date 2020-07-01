@@ -134,7 +134,7 @@
       "name": "vm_1_root_disk_controller_type",
       "type": "string",
       "description": "Type of template disk controller",
-      "hidden": true,
+      "hidden": false,
       "label": "Template Disk Controller - vm_1",
       "secured": false,
       "options": [
