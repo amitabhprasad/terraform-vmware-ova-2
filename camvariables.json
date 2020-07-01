@@ -187,21 +187,8 @@
       "hidden": true,
       "label": "Template Disk Type - vm_1",
       "secured": false,
-      "options": [
-        {
-          "value": "eager_zeroed",
-          "label": "Thick Provision Eager Zeroed"
-        },
-        {
-          "value": "lazy",
-          "label": "Thick Provision Lazy Zeroed"
-        },
-        {
-          "value": "thin",
-          "label": "Thin Provision",
-          "default": "true"
-        }
-      ],
+      "label": "Thin Provision",
+      "default": "thin",
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
