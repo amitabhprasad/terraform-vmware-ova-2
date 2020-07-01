@@ -79,8 +79,17 @@
       "hidden": false,
       "label": "Delete template disk volume when the virtual machine is deleted - vm_1",
       "secured": false,
-      "label": "True",
-      "default": "true",
+      "options": [
+        {
+          "value": "false",
+          "label": "False"
+        },
+        {
+          "value": "true",
+          "label": "True",
+          "default": "true"
+        }
+      ],
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
