@@ -79,17 +79,8 @@
       "hidden": false,
       "label": "Delete template disk volume when the virtual machine is deleted - vm_1",
       "secured": false,
-      "options": [
-        {
-          "value": "false",
-          "label": "False"
-        },
-        {
-          "value": "true",
-          "label": "True",
-          "default": "true"
-        }
-      ],
+      "label": "True",
+      "default": "true",
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
@@ -137,33 +128,8 @@
       "hidden": false,
       "label": "Template Disk Controller - vm_1",
       "secured": false,
-      "options": [
-        {
-          "value": "scsi",
-          "label": "scsi",
-          "default": "true"
-        },
-        {
-          "value": "scsi-lsi-parallel",
-          "label": "scsi-lsi-parallel"
-        },
-        {
-          "value": "scsi-buslogic",
-          "label": "scsi-buslogic"
-        },
-        {
-          "value": "scsi-paravirtual",
-          "label": "scsi-paravirtual"
-        },
-        {
-          "value": "scsi-isi-sas",
-          "label": "scsi-isi-sas"
-        },
-        {
-          "value": "ide",
-          "label": "ide"
-        }
-      ],
+      "label": "scsi",
+      "default": "scsi",
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
@@ -308,17 +274,8 @@
       "hidden": true,
       "label": "vSphere Network Adapter Type",
       "secured": false,
-      "options": [
-        {
-          "value": "vmxnet3",
-          "label": "vmxnet3",
-          "default": "true"
-        },
-        {
-          "value": "e1000",
-          "label": "e1000"
-        }
-      ],
+      "label": "vmxnet3",
+      "default": "vmxnet3",
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
